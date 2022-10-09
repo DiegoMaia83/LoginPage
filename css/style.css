@@ -1,0 +1,133 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: linear-gradient(45deg, rgb(36, 155, 151), rgb(58, 184, 171));
+	font-family: "Roboto", sans-serif;
+	margin: 0;
+	overflow: hidden;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.card {
+	display: flex;
+	border-radius: 8px;
+	box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.36);
+}
+
+.card::before {
+	content: "";
+	position: absolute;
+	top: calc(100% - 400px);
+	left: -80px;
+	z-index: -1;
+	background: rgb(48, 174, 166);
+	border-radius: 50%;
+	width: 500px;
+	height: 500px;
+}
+
+.card::after {
+	content: "";
+	position: absolute;
+	top: -80px;
+	right: -16px;
+	z-index: -1;
+	background: rgb(40, 161, 161);
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+}
+
+.card .container-label {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 26px;
+	color: #ffffff;
+	background: linear-gradient(180deg, rgb(34, 148, 131), rgb(58, 190, 183));
+	padding-left: 2rem;
+	padding-right: 3rem;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+
+.card .container-label span {
+	background-color: #ffffff;
+	margin-top: 2px;
+	height: 3px;
+	width: 48px;
+}
+
+.card .container-form form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	color: rgb(34, 148, 131);
+	background: #e0e0e0;
+	padding: 5rem;
+	width: 450px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.card .container-form label {
+	font-size: 0.8rem;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.card .container-form input {
+	color: rgb(96, 120, 119);
+	background-color: transparent;
+	padding: 8px;
+	border: none;
+	border-bottom: 1px solid rgb(64, 203, 182);
+	width: 100%;
+}
+
+.card .container-form input::placeholder {
+	color: rgb(64, 203, 182);
+}
+
+.card .container-form #email {
+	margin-bottom: 1.75rem;
+}
+
+
+
+.card .container-form .change-password {
+	font-size: 0.8rem;
+	font-weight: 500;
+	color: rgb(34, 148, 131);
+	margin-top: 0.75rem;
+}
+
+.card .container-form .change-password a {
+	color: rgb(34, 148, 131);
+}
+
+.card .container-form button {
+	color: #ffffff;
+	text-transform: uppercase;
+	background: linear-gradient(180deg, rgb(34, 148, 131), rgb(58, 190, 183));
+	padding: 12px 16px;
+	margin-top: 2rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
